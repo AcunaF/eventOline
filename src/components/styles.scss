@@ -1,0 +1,196 @@
+$thick: 2px;
+$pad: 0.9em;
+$extra: calc(#{$pad} * 0.2);
+$color: #f26522;
+
+h1 {
+  padding: $pad $extra;
+  display: inline-block;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  color: white;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -$thick;
+    left: $extra;
+    right: $extra;
+    height: $thick;
+    background: $color;
+    // z-index: -1;
+  }
+}
+
+.game-experiment {
+  background: #2d2d2d;
+  height: auto;
+  a {
+    color: white;
+    padding: $pad $extra;
+    display: inline-block;
+    border: $thick solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+
+    .text {
+      padding: 0 0.3em;
+      font-family: proxima-nova, monospace;
+      font-size: 46px;
+      color: white;
+      transform: translate3d(0, $pad, 0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+      margin-bottom: 15px;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: -$thick;
+      left: $extra;
+      right: $extra;
+      height: $thick;
+      background: $color;
+      // z-index: -1;
+      transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
+        right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+        left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+      transform-origin: left;
+    }
+  }
+
+  .line {
+    position: absolute;
+    background: $color;
+
+    &.-right,
+    &.-left {
+      width: $thick;
+      bottom: -$thick;
+      top: -$thick;
+      transform: scale3d(1, 0, 1);
+    }
+
+    &.-top,
+    &.-bottom {
+      height: $thick;
+      left: -$thick;
+      right: -$thick;
+      transform: scale3d(0, 1, 1);
+    }
+
+    &.-right {
+      right: -$thick;
+      transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+      transform-origin: top;
+    }
+
+    &.-top {
+      top: -$thick;
+      transition: transform 0.08s linear 0.43s;
+      transform-origin: left;
+    }
+
+    &.-left {
+      left: -$thick;
+      transition: transform 0.08s linear 0.51s;
+      transform-origin: bottom;
+    }
+
+    &.-bottom {
+      bottom: -$thick;
+      transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+      transform-origin: right;
+    }
+  }
+
+  a:hover,
+  a:active {
+    .text {
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    }
+
+    &:after {
+      transform: scale3d(0, 1, 1);
+      right: -$thick;
+      left: -$thick;
+      transform-origin: right;
+      transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
+        right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+    }
+  }
+}
+
+.boton {
+  box-shadow: #333;
+  margin: 10px;
+}
+
+.container-principal {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.container-principal img {
+  width: 70%; /* Ajusta esto a lo ancho que quieras que sea la imagen por defecto */
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .container-principal {
+    height: auto;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container-principal {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-principal {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+  .container-principal img {
+    width: 80%;
+  }
+}
+.Ticketmaster {
+  background: #2d2d2d;
+  height: auto;
+  a {
+    color: white;
+    padding: $pad $extra;
+    display: inline-block;
+    border: $thick solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+
+    .text {
+      padding: 0 0.3em;
+      font-family: proxima-nova, monospace;
+      font-size: 46px;
+      color: white;
+      transform: translate3d(0, $pad, 0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+      margin-bottom: 15px;
+    }
+  }
+}
