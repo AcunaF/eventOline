@@ -4,7 +4,7 @@ import "./banner.style.scss";
 export const FullScreenImage = () => {
   return (
     <div className="bannerImg">
-      <img src={backgroundImage} alt="background" width="850" height="400" />
+      <img src={backgroundImage} alt="background" width="710" height="400" />
     </div>
   );
 };

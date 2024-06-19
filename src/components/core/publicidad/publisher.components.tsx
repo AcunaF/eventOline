@@ -5,10 +5,15 @@ export const Advertisement = () => {
     <>
       <div className="publicidad">
         <img src={fondo} alt="Anuncio" />
+        <p className="publicidad-text">
+          Follow us on our networks to get discounts on your favorite recitals
+        </p>
+        <ul>
+          <li>
+            <a></a>
+          </li>
+        </ul>
       </div>
-      <p className="tittle-publicidad">
-        Follow us on our networks to get discounts on your favorite recitals
-      </p>
     </>
   );
 };
